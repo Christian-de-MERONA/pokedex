@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+.background {
+    background-color: #C14040;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFE3E3 ;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 97%;
+    margin: 0.5rem auto;
+}
+
+.navbar > * {
+    color: #C14040;
+}
+
+.navbar__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__item {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: #C14040
+}
+
+.navbar__link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin-top : 2rem;
+}
+
+.container,
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: auto;
+    flex-direction: column;
+    background-color: #982C2C;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    /* overflow: hidden; */
+
+}
+
+
+.card:hover .card__image{
+    transform: scale(1.2) translateY(-10px);
+}
+
+.card__image {
+    height: 10rem;
+    width: auto;
+    transition: all 0.3s ease-out;
+}
+
+.card__name {
+    color: #EFE3E3;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.card__name:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* details page */
+.detail-card > * {
+    color: #EFE3E3;
+}
+
+.detail-card__title {
+    margin: 1rem auto;
+}
+
+.small-color-box {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #EFE3E3;
+    border-radius: 5px;
+}
+
+.small-color-box:hover {
+    display: inline-block;
+    box-shadow: 1px 1px 1px black;
+}
+
+.detail-card__container,
+.stat-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stats-name{
+    width: 100px;
+}
+
+.stats-num {
+    width: 50px;
+}
+
+.stat-item {
+    justify-content: space-between;
+}
+
+.stats-background,
+.stats-level {
+    height: 1rem;
+}
+
+
+.stats-background{
+    border-radius: 5px;
+    overflow: hidden;
+    position:relative;
+    width: 255px;
+    background-color: darkred;
+}
+
+.detail-card__container {
+    flex-wrap: wrap;
+    /* width: 900px; */
+    margin: 0 auto;
+}
+
+.detail-card__container .image{
+    width: 45%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.detail-card__container .stats {
+    width: 450px;
+    padding: 1rem;
+}
+
+.detail-card__image {
+    animation: grow 0.5s cubic-bezier(0.42, 0, 0.54, 1.96);
+    display: block;
+    margin: 0 auto;
+}
+
+.detail-card__container .stats {
+    background-color: #982C2C;
+    margin: 0.5rem;
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.detail-card__container .image .detail-card__image {
+    height: 20rem;
+}
+
+.detail-card__title {
+    text-align: center;
+}
+
+.stats-level {
+    position: absolute;
+    width: 100px;
+    top:0;
+    left:0;
+    background-color: white;
+    animation: slide-in 1s ease-in;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* types page */
+
+.pokemon-type-title {
+    color: #EFE3E3;
+    text-align: center;
+}
+
+.color-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #EFE3E3;
+}
+
+.color-box {
+    display: block;
+    width: 20rem;
+    height: 6rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 6rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #EFE3E3;
+}
+
+.color-box:hover {
+    box-shadow: 1px 1px 3px black;
+}  
+
+.notfound {
+    background-image: url("../img/sad-pikachu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #EFE3E3;
+    text-shadow: 10px 2px 2px black;
+    font-size: 4rem;
+}
+
+.notfound > h1 {
+    font-size: 15rem;
+}
